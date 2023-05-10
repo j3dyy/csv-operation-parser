@@ -1,0 +1,53 @@
+{
+    "name": "j3dyy/csv-operation-parser",
+    "description": "Csv operation parse",
+    "type": "library",
+    "keywords": ["php", "php csv parser"],
+    "minimum-stability": "stable",
+    "version": "0.1",
+    "autoload": {
+        "psr-4": {
+            "J3dyy\\CsvOperationParser\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "J3dyy\\CsvOperationParser\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jedy",
+            "email": "mr.nizharadze@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "ext-fileinfo": "*",
+        "guzzlehttp/guzzle": "^7.5",
+        "illuminate/collections": "^10.9",
+        "j3dyy/file-parser": "dev-main",
+        "nesbot/carbon": "^2.66"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^v3.16.0",
+        "phpunit/phpunit": "^10.1.2",
+        "symfony/var-dumper": "^6.2"
+    },
+    "config": {
+        "sort-packages": true,
+        "bin-dir": "bin"
+    },
+    "scripts": {
+        "phpunit": "phpunit tests/",
+        "fix-cs": "php-cs-fixer fix",
+        "test-cs": "php-cs-fixer fix --dry-run -v",
+        "test": ["@phpunit", "@test-cs"]
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/j3dyy/file-parser.git"
+        }
+    ]
+}
